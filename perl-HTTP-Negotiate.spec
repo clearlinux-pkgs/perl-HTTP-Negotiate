@@ -4,13 +4,13 @@
 #
 Name     : perl-HTTP-Negotiate
 Version  : 6.01
-Release  : 14
-URL      : http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
-Source0  : http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
+Release  : 15
+URL      : https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
 Summary  : choose a variant to serve
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-HTTP-Negotiate-doc
+Requires: perl-HTTP-Negotiate-man
 BuildRequires : perl(HTTP::Headers)
 BuildRequires : perl(HTTP::Request)
 BuildRequires : perl(URI)
@@ -21,12 +21,12 @@ HTTP::Negotiate - choose a variant to serve
 SYNOPSIS
 use HTTP::Negotiate qw(choose);
 
-%package doc
-Summary: doc components for the perl-HTTP-Negotiate package.
-Group: Documentation
+%package man
+Summary: man components for the perl-HTTP-Negotiate package.
+Group: Default
 
-%description doc
-doc components for the perl-HTTP-Negotiate package.
+%description man
+man components for the perl-HTTP-Negotiate package.
 
 
 %prep
@@ -39,7 +39,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 else
 %{__perl} Build.PL
 ./Build
@@ -68,6 +68,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/lib/perl5/site_perl/5.26.1/HTTP/Negotiate.pm
 
-%files doc
+%files man
 %defattr(-,root,root,-)
-%doc /usr/share/man/man3/*
+/usr/share/man/man3/HTTP::Negotiate.3
