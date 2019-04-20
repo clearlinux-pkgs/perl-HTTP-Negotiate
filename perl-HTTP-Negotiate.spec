@@ -4,10 +4,10 @@
 #
 Name     : perl-HTTP-Negotiate
 Version  : 6.01
-Release  : 26
+Release  : 27
 URL      : https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
-Summary  : choose a variant to serve
+Summary  : Choose a variant to serve
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -25,6 +25,7 @@ use HTTP::Negotiate qw(choose);
 Summary: dev components for the perl-HTTP-Negotiate package.
 Group: Development
 Provides: perl-HTTP-Negotiate-devel = %{version}-%{release}
+Requires: perl-HTTP-Negotiate = %{version}-%{release}
 
 %description dev
 dev components for the perl-HTTP-Negotiate package.
