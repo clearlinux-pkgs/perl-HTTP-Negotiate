@@ -4,7 +4,7 @@
 #
 Name     : perl-HTTP-Negotiate
 Version  : 6.01
-Release  : 24
+Release  : 25
 URL      : https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
 Summary  : choose a variant to serve
