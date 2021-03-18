@@ -4,7 +4,7 @@
 #
 Name     : perl-HTTP-Negotiate
 Version  : 6.01
-Release  : 30
+Release  : 31
 URL      : https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Negotiate-6.01.tar.gz
 Summary  : choose a variant to serve
@@ -86,4 +86,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/HTTP/Negotiate.pm
+/usr/lib/perl5/vendor_perl/5.32.1/HTTP/Negotiate.pm
